@@ -7,6 +7,12 @@ while (input !== 'quit' && input !== 'q') {
             console.log(`${i}: ${todos[i]}`)
         }
         console.log('********************************');
+    } else if (input === 'n') {
+        const newTodo = prompt('Please enter new Todo:')
+        todos.push(newTodo);
+        console.log(`${newTodo} added to the list`)
+    } else if (input === 'd') {
+        const index = prompt('Please enter an index to delete:')
     }
     input = prompt('what would you liek to do?'); 
 }

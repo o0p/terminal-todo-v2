@@ -13,7 +13,7 @@ while (input !== 'quit' && input !== 'q') {
         console.log(`${newTodo} added to the list`)
     } else if (input === 'd') {
         const index = parseInt(prompt('Please enter an index to delete:'));
-        if(!Number.isNaN(index)){
+        if(!Number.isNaN(index) && index > 0){
             const deleted = todos.splice(index, 1);
             console.log(`"${deleted[0]}" has been delted`);
         } else {

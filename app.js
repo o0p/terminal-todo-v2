@@ -1,25 +1,25 @@
-let input = prompt('what would you like to do?');
-const todos = [1,2,3,4,5];
-while (input !== 'quit' && input !== 'q') {
-    if (input === 'l') {
+let askUsr = prompt('what would you like to do?');
+const itemtList = [1,2,3,4,5];
+while (askUsr !== 'quit' && askUsr !== 'q') {
+    if (askUsr === 'l') {
         console.log('********************************');
-        for(let i = 0; i < todos.length; i++) {
-            console.log(`${i}: ${todos[i]}`)
+        for(let i = 0; i < itemtList.length; i++) {
+            console.log(`${i}: ${itemtList[i]}`)
         }
         console.log('********************************');
-    } else if (input === 'n') {
+    } else if (askUsr === 'n') {
         const newTodo = prompt('Please enter new Todo:')
-        todos.push(newTodo);
+        itemtList.push(newTodo);
         console.log(`${newTodo} added to the list`)
-    } else if (input === 'd') {
-        const index = parseInt(prompt('Please enter an index to delete:'));
-        if(!Number.isNaN(index) && index > 0){
-            const deleted = todos.splice(index, 1);
-            console.log(`"${deleted[0]}" has been delted`);
+    } else if (askUsr === 'd') {
+        const indexDel = parseInt(prompt('Please enter an indexDel to delete:'));
+        if(!Number.isNaN(indexDel) && indexDel > 0){
+            const delItem = itemtList.splice(indexDel, 1);
+            console.log(`"${delItem[0]}" has been delted`);
         } else {
-            console.log('Unknown index')
+            console.log('Unknown indexDel')
         }
     }
-    input = prompt('What would you like to do?'); 
+    askUsr = prompt('What would you like to do?'); 
 }
 console.log('Ok, quit the app')
